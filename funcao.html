@@ -27,7 +27,7 @@ function saldacao() {
 saldacao();
 
 //função soma
-function somar(x, y) {
+function somar(x=0, y=0) {
     const ans = x + y; 
     return ans;
 }
@@ -46,16 +46,24 @@ function comparador(item1,item2,nome){
     }
 }
 
+function leitura_banco(){
+  //Leitura dos valores reais no banco de dados e armazenados na variável
+  const valoreslidos = {
+                            nome : "Rafael",
+                            numero : 123456,
+                            codigo : 123
+                        }
+  return valoreslidos;
+}
+
 function card_validate(nome, numero, codigo){
-    //Leitura dos valores reais no banco de dados
-    const nome_verdadeiro = "Rafael";
-    const numero_verdadeiro = 123456;
-    const codigo_verdadeiro = 123;
+    //leitura do banco
+    const verdadeiro = leitura_banco();  
 
     //compara os valores oferecidos pelo usuário com os valores recebidos do banco de dados
-    const check_name = comparador(nome, nome_verdadeiro, "Nome");
-    const check_number = comparador(numero, numero_verdadeiro, "Número");
-    const check_code = comparador(codigo, codigo_verdadeiro, "Código");
+    const check_name = comparador(nome, verdadeiro.nome, "Nome");
+    const check_number = comparador(numero, verdadeiro.numero, "Número");
+    const check_code = comparador(codigo, verdadeiro.codigo, "Código");
 
     //verifica se todos os valores conferem
     if ( check_name && check_number && check_code){
