@@ -1,0 +1,77 @@
+Abra o console do navegador
+
+<br><b>Estudos sobre função em js</b>
+<br><b>Desafio do cartão</b>
+
+
+
+<script>
+// cores para o console.log
+const blue = 'color: blue;';
+const red = 'color: red;';
+const yellow = 'color: yellow;';
+const orange = 'color: orange;';
+const green = 'color: green;';
+
+const blue_bold = 'background: blue; color: white; display: block;';
+const red_bold = 'background: red; color: white; display: block;';
+const yellow_bold = 'background: yellow; color: white; display: block;';
+const orange_bold = 'background: orange; color: white; display: block;';
+const green_bold = 'background: green; color: white; display: block;';
+
+//declaração de uma função
+function saldacao() {
+    console.log("olá mundo!");
+}
+//assionamento de uma função
+saldacao();
+
+//função soma
+function somar(x, y) {
+    const ans = x + y; 
+    return ans;
+}
+let resp = somar(5,3);
+console.log(resp);
+
+//desafio do cartão -----------------------------------------------
+
+function comparador(item1,item2,nome){
+    if(item1 === item2){
+        console.log("%c O "+nome+" do cartão está correto",blue);
+        return true;
+    } else {
+        console.log("%c O "+nome+" do cartão está incorreto",red);
+        return false;
+    }
+}
+
+function card_validate(nome, numero, codigo){
+    //Leitura dos valores reais no banco de dados
+    const nome_verdadeiro = "Rafael";
+    const numero_verdadeiro = 123456;
+    const codigo_verdadeiro = 123;
+
+    //compara os valores oferecidos pelo usuário com os valores recebidos do banco de dados
+    const check_name = comparador(nome, nome_verdadeiro, "Nome");
+    const check_number = comparador(numero, numero_verdadeiro, "Número");
+    const check_code = comparador(codigo, codigo_verdadeiro, "Código");
+
+    //verifica se todos os valores conferem
+    if ( check_name && check_number && check_code){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//valores informados pelo usuário
+card_status = card_validate("Rafael",123456,123);
+
+if (card_status){
+    console.log("%c cartão validado com sucesso", green_bold);
+} else {
+    console.log("%c Não foi possível validar o cartão", red_bold);
+}
+
+</script>
