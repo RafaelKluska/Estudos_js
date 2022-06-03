@@ -46,15 +46,12 @@ function comparador(item1,item2,nome){
     }
 }
 
-function leitura_banco(){
-  //Leitura dos valores reais no banco de dados e armazenados na variável
-  const valoreslidos = {
+//Leitura dos valores reais no banco de dados e armazenados na variável
+const leitura_banco = () => valoreslidos = {
                             nome : "Rafael",
                             numero : 123456,
                             codigo : 123
                         }
-  return valoreslidos;
-}
 
 function card_validate(nome, numero, codigo){
     //leitura do banco
@@ -81,5 +78,9 @@ if (card_status){
 } else {
     console.log("%c Não foi possível validar o cartão", red_bold);
 }
+
+//-----------------------------------------------
+
+
 
 </script>
