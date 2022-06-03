@@ -65,7 +65,40 @@ for(const i of a3){
     console.log(i);
 }
 
+// map, filter and find
 
+const valoreEmReais = [10, 30, 550, 321];
+console.table(valoreEmReais);
+const cotacao = 5.45;
+const valoresEmDolares = valoreEmReais.map((valor) => valor * cotacao);
+
+console.table(valoresEmDolares);
+
+
+const valorContas = [10, 30, 550, 321];
+console.table(valorContas);
+const valoresMaiores = valoreEmReais.filter((valor) => valor > 30);
+
+console.table(valoresMaiores);
+
+console.table(valorContas);
+const valoresLocalizados = valoreEmReais.find((valor) => valor > 30);
+
+console.table(valoresLocalizados);
+
+ // ordenação
+
+ const valores = ["a3", "a33", "a1", "A", "a", "A3"];
+ console.table(valores);
+
+ valoresOrdenados = valores.sort();// isso funciona bem para textos. mas temos dificuldades com números
+ console.table(valoresOrdenados);
+
+ const valores2 = [10, 40, 9, 1.4, 90000, 100];
+ console.table(valores2);
+
+ valoresOrdenados2 = valores2.sort((a, b) => a - b); 
+ console.table(valoresOrdenados2);
 
 
 </script>
