@@ -3,5 +3,55 @@ Abra o console do navegador
 <br><b>Estudos de dados em js</b>
 
 <script>
+// estudos com arry
+
+//new array
+const a1= [];
+const a2 = new Array();
+const a3 = new Array("elemento 1");
+
+console.log(a1);
+console.log(a2);
+console.log(a3);
+
+a3.push("elemento 2"); //adiciona no final do array
+
+console.log(a3);
+
+a3.unshift("elemento 0");
+
+console.table(a3);
+console.log(a3.length);
+
+//remover itens
+const removido1 = a3.pop(); //remove o ultimo e seleciona o elemento
+console.table(a3);
+console.log("o elemento removido foi: " + removido1);
+
+const removido2 = a3.shift(); //remove o primero e seleciona o elemento
+console.table(a3);
+console.log("o elemento removido foi: " + removido2);
+
+
+a3.push("elemento 2") ;
+a3.push("elemento 3") ;
+a3.push("elemento 4") ;
+
+console.table(a3);
+
+// métdo splice
+
+const removido3 = a3.splice(2,1);//removerá o elemento na posição 2  
+console.table(a3);
+console.log("o elemento removido foi: " + removido3);
+
+a3.splice(2,0,"elemento 3");//adicionará o elemento 3 na posição 2  
+console.table(a3);
+
+console.log(a3.indexOf("elemento 3"));// localiza a posição de um elemento em um array
+
+console.log(a3.includes("elemento 3"))// veriica se um array contem um determinado elemento
+
+
 
 </script>
