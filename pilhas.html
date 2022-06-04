@@ -1,0 +1,46 @@
+Abra o console do navegador
+
+<br><b>Estudos de pilhas em js</b>
+
+<script>
+
+class Pilha{
+    constructor(){
+        this.itens = [];
+    }
+    add(item) {
+        this.itens.push(item);
+    }
+    remove() {
+        this.itens.pop();
+    }
+    primeiro() {
+        return this.itens[this.itens.length - 1];
+    }
+    ultimo() {
+        return this.itens[0];
+    }
+    estaVazia() {
+        return this.itens.length == 0;
+    }
+}
+
+const pilha = new Pilha();
+pilha.add(10);
+pilha.add(20);
+pilha.add(30);
+pilha.add(40);
+pilha.add(50);
+
+console.log("Itens da pilha");
+console.table(pilha.itens);
+
+pilha.remove();
+
+console.log("Itens da pilha depois de remover o último");
+console.table(pilha.itens);
+console.log("Ultimo da pilha: " + pilha.ultimo() );
+console.log("Primiro da pilha: " + pilha.primeiro() );
+console.log("Apilha está vazia: " + pilha.estaVazia() );
+
+</script>
