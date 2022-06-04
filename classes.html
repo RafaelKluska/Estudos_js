@@ -1,0 +1,32 @@
+Abra o console do navegador
+
+<br><b>Estudos de dados - classes em js</b>
+
+<script>
+const objeto1 = {
+    nome : "rafael",
+    idade : 31,
+    carro : "mercedes",
+}
+console.table(objeto1);
+
+class pessoa {
+    constructor(nome, nascimento, carros = []){
+        this.nome = nome;
+        this.nascimento = nascimento;
+        this.carros = carros;
+    }
+}
+
+const pessoa1 = new pessoa("Rafael", "1989", ["mercedes", "Peugeot", "Volkswagen"]);
+const pessoa2 = new pessoa("Felipe", "1987", ["toyota", "Chevrolet"]);
+
+console.table(pessoa1);
+console.table(pessoa2);
+
+for(const propriedade in pessoa1){
+    console.log(propriedade +" : "+pessoa1[propriedade]);
+}
+
+
+</script>
