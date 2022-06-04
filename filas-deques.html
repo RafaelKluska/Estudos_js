@@ -1,0 +1,51 @@
+Abra o console do navegador
+
+<br><b>Estudos de dados - filas e deques em js</b>
+
+<script>
+
+class Fila {
+    constructor(){
+        this.itens = []
+    }
+    enqueue(item){
+        this.itens.push(item);
+    }
+    isEmpty(item){
+        return this.itens.length == 0;
+    }
+    dequeue(item){
+        if (this.isEmpty()) return undefined;
+
+        return this.itens.shift();
+    }
+    front(){
+        return this.itens[0];
+    }
+    rear(){
+        return this.itens[this.itens.length - 1];
+    }
+}
+const fila = new Fila ();
+console.table("A fila está vazia: " + fila.isEmpty());
+
+fila.enqueue("Ferrari");
+fila.enqueue("lamborguini");
+fila.enqueue("Mercedes-Benz");
+fila.enqueue("Porche");
+fila.enqueue("Volvo");
+
+console.table(fila.itens);
+console.table("A fila está vazia: " + fila.isEmpty());
+
+fila.dequeue();
+console.table(fila.itens);
+
+console.log("Primeiro: ", fila.front());
+console.log("Útltimo: ", fila.rear());
+
+
+
+
+
+</script>
