@@ -1,6 +1,6 @@
 Abra o console do navegador
 
-<br><b>Estudos de dados - filas e deques em js</b>
+<br><b>Estudos de dadoO deque e deques em js</b>
 
 <script>
 
@@ -44,6 +44,55 @@ console.table(fila.itens);
 console.log("Primeiro: ", fila.front());
 console.log("Útltimo: ", fila.rear());
 
+
+// ----------------------------------------
+//deques
+
+class Deque {
+    constructor(){
+        this.itens = []
+    }
+    insertFront(item){
+       return this.itens.unshift(item);
+    }
+    insertLast(item){
+        return this.itens.push(item);
+    }
+    deletFront(item){
+        if (this.isEmpty()) return undefined;
+        return this.itens.shift();
+    }
+    deletLast(item){
+        if (this.isEmpty()) return undefined;
+        this.itens.pop();
+    }
+    isEmpty(item){
+        return this.itens.length == 0;
+    }
+    front(){
+        return this.itens[0];
+    }
+    rear(){
+        return this.itens[this.itens.length - 1];
+    }
+}
+const deque = new Deque();
+console.table("O deque está vazia: " + deque.isEmpty());
+
+deque.insertFront("Ferrari");
+deque.insertFront("lamborguini");
+deque.insertFront("Mercedes-Benz");
+deque.insertLast("Porche");
+deque.insertLast("Volvo");
+
+console.table(deque.itens);
+console.table("A deque está vazia: " + deque.isEmpty());
+
+deque.deletFront();
+console.table(deque.itens);
+
+console.log("Primeiro: ", deque.front());
+console.log("Útltimo: ", deque.rear());
 
 
 
